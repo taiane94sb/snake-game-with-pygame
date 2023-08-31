@@ -1,2 +1,1 @@
-# snake-game-with-pygame
-Building A Snake Game Using PyGame
+Snake Game: Using Python and PyGame.
