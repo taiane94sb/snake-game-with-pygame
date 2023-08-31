@@ -11,6 +11,7 @@ pygame.display.set_caption("Snake Game")
 
 white = (255, 255, 255)
 black = (0, 0, 0)
+red = (255, 0, 0)
 
 game_over = False
 
@@ -49,6 +50,7 @@ while not game_over:
 
         window.fill(black)
 
-    pygame.draw.rect(window, white, [x1, y1, 10, 10])
+    pygame.draw.rect(window, red, [400, 300, 10, 10])  # snake
+    pygame.draw.rect(window, white, [x1, y1, 10, 10])  # food
     pygame.display.update()
     clock.tick(30)
