@@ -20,6 +20,8 @@ y1 = window_width / 2
 x1_change = 0
 y1_change = 0
 
+clock = pygame.time.Clock()
+
 while not game_over:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
@@ -45,3 +47,4 @@ while not game_over:
 
     pygame.draw.rect(window, white, [x1, y1, 10, 10])
     pygame.display.update()
+    clock.tick(30)
