@@ -1,4 +1,5 @@
 import pygame
+import random
 
 
 pygame.init()
@@ -20,6 +21,9 @@ y1 = window_width / 2
 
 x1_change = 0
 y1_change = 0
+
+foodx = round(random.randrange(0, window_width - 10) / 10) * 10.0
+foody = round(random.randrange(0, window_height - 10) / 10) * 10.0
 
 clock = pygame.time.Clock()
 
@@ -50,7 +54,7 @@ while not game_over:
 
         window.fill(black)
 
-    pygame.draw.rect(window, red, [400, 300, 10, 10])  # snake
-    pygame.draw.rect(window, white, [x1, y1, 10, 10])  # food
+    pygame.draw.rect(window, red, [foodx, foody, 10, 10])  # food
+    pygame.draw.rect(window, white, [x1, y1, 10, 10])  # snake
     pygame.display.update()
     clock.tick(30)
