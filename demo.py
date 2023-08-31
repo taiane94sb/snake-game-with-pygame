@@ -43,6 +43,10 @@ while not game_over:
 
         x1 = x1 + x1_change
         y1 = y1 + y1_change
+
+        if x1 >= window_width or x1 < 0 or y1 >= window_height or y1 < 0:
+            game_over = True
+
         window.fill(black)
 
     pygame.draw.rect(window, white, [x1, y1, 10, 10])
